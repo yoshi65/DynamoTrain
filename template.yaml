@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  DynamoTrain
+
+  Sample SAM Template for DynamoTrain
+
+Globals:
+  Function:
+    Timeout: 30
+
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Runtime: python3.6
+      Events:
+        GetData:
+          Type: Api
+          Properties:
+            Path: /dynamotrain
+            Method: get
+        PostData:
+          Type: Api
+          Properties:
+            Path: /dynamotrain
+            Method: post
