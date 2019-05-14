@@ -30,6 +30,10 @@
     ```sh
     % python create_table.py
     ```
+1. make endpoint
+    ```sh
+    % sam local start-api
+    ```
 1. test post and get
     ```sh
     % curl -XPOST -d '{"vote": "tabs"}' http://127.0.0.1:3000/dynamotrain
