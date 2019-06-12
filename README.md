@@ -1,21 +1,5 @@
 # DynamoTrain
-
-## SETTING
-1. dockerのインストール
-1. python3.6のインストール
-1. pipのインストール
-1. aws-sam-cliのインストール
-    ```sh
-    % pip install awscli aws-sam-cli
-    ```
-1. awsの初期設定
-    ```sh
-    % aws configure
-    AWS Access Key ID: 
-    AWS Secret Access Key:
-    Default region name: ap-northeast-1
-    Default output format:
-    ```
+Provide environment of training DynamoDB in local.
 
 ## How to test local
 1. start DynamoDB local
@@ -38,6 +22,21 @@
     ```sh
     % curl -XPOST -d '{"vote": "tabs"}' http://127.0.0.1:3000/dynamotrain
     % curl -XGET -d '{"vote": "tabs"}' http://127.0.0.1:3000/dynamotrain
+    ```
+
+## Dependencies
+* docker
+* python3.6
+* pip
+* boto3
+* aws-sam-cli
+    ```sh
+    % pip install awscli aws-sam-cli
+    % aws configure
+    AWS Access Key ID:
+    AWS Secret Access Key:
+    Default region name: ap-northeast-1
+    Default output format:
     ```
 
 ## References
